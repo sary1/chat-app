@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web app chat</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!--.............................................
+        ............ The side notification
+        ..............................................-->
+
+    <div id="side-notification">
+        <div class="notif-icon">
+            <div class="inbox">
+                <div class="inner"></div>
+                <div class="inner"></div>
+                <div class="inner"></div>
+                <div class="arrow-down-notif"></div>
+            </div>
+        </div>
+        <div class="notif-data">
+            <h4>Penny Rogers</h4>
+            <p>roident, sunt in culpa qui os.</p>
+        </div>
+    </div>
+
+    <!--.............................................
+        ............ The Main chat application
+        ..............................................-->
+
+    <div id="container">
+
+        <!--.............................................
+        The left side container =>
+        ............... Control Box
+        ............... Categories
+        ............... Friends List
+        ..............................................-->
+
+        <div id="contacts-list">
+
+            <!--.............................................
+            Close, Restore down, Minimize
+            ..............................................-->
+
+            <div id="control-box">
+                <div class="red"></div>
+                <div class="yellow"></div>
+                <div class="green"></div>
+            </div>
+
+            <!--.............................................
+            The three categories of navigation
+            ..............................................-->
+            <div id="categories">
+                <div class="contacts">
+                    <div class="inbox">
+                        <div class="inner"></div>
+                        <div class="inner"></div>
+                        <div class="inner"></div>
+                        <div class="arrow-down"></div>
+                    </div>
+                </div>
+                <div class="friends-list">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                    <input type="search" class="display input-search" placeholder="Search">
+                </div>
+            </div>
+
+            <!--.............................................
+            Recent chats
+            ..............................................-->
+            <div id="last-chats">
+                <div class="chats first-contact">
+                    <div class="profile">
+                        <img src="images/1.jpg">
+                        <div class="online"></div>
+                    </div>
+                    <div class="data">
+                       <h4>LINSEY CRUZ</h4>
+                        <p>Lorem ipsum dolor amet labor...</p>
+                    </div>
+                    <div class="time">
+                        <p>12:37 PM</p>
+                        <div class="notification display">
+                            <p>1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chats second-contact">
+                    <div class="profile">
+                        <img src="images/2.jpg">
+                        <div class="offline"></div>
+                    </div>
+                    <div class="data">
+                       <h4>CALVIN CARTER</h4>
+                        <p>ullamco laboris nisi ut aliqu...</p>
+                    </div>
+                    <div class="time">
+                        <p>12:37 PM</p>
+                        <div class="notification display">
+                            <p>1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chats third-contact">
+                    <div class="profile">
+                        <img src="images/3.jpg">
+                        <div class="online"></div>
+                    </div>
+                    <div class="data">
+                       <h4>PENNY ROGERS</h4>
+                        <p>roident, sunt in culpa qui os...</p>
+                    </div>
+                    <div class="time">
+                        <p>12:37 PM</p>
+                        <div class="notification display">
+                            <p>1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chats">
+                    <div class="profile">
+                        <img src="images/4.jpg">
+                        <div class="offline"></div>
+                    </div>
+                    <div class="data">
+                       <h4>PHILIP CLARKE</h4>
+                        <p>culpa qui officia deserunt mo...</p>
+                    </div>
+                    <div class="time">
+                        <p>10:25 PM</p>
+                        <div class="notification display">
+                            <p>1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chats">
+                    <div class="profile">
+                        <img src="images/5.jpg">
+                        <div class="offline"></div>
+                    </div>
+                    <div class="data">
+                       <h4>HILDA PAGE</h4>
+                        <p>consectetur adipisicing elit,...</p>
+                    </div>
+                    <div class="time">
+                        <p>8:54 PM</p>
+                        <div class="notification display">
+                            <p>1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chats">
+                    <div class="profile">
+                        <img src="images/6.jpg">
+                        <div class="offline"></div>
+                    </div>
+                    <div class="data">
+                       <h4>CARLOS MORRISON</h4>
+                        <p>cillum dolore eu fugiat nulla...</p>
+                    </div>
+                    <div class="time">
+                        <p>1:37 PM</p>
+                        <div class="notification display">
+                            <p>1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!--.............................................
+        The right side container =>
+        ............... Current chat
+        ............... Chat box
+        ............... Sending form
+        ..............................................-->
+
+        <div id="chat-box">
+
+            <!--.............................................
+            The header containing current chat info
+            ..............................................-->
+
+            <div id="title">
+                <img src="images/1.jpg" class="current-chat-img">
+                <p class="current-chat-friend">CHAT WITH LINSEY CRUZ</p>
+                <div class="settings">
+                    <i class="fas fa-cog"></i>
+                </div>
+            </div>
+
+            <!--.............................................
+            Current chat canvas
+            ..............................................-->
+
+            <div id="chat-canvas" class= "first-canvas">
+
+                <div class="receive-form">
+                    <div class="arrow-up"></div>
+                    <div class="receive">
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+                    <p class="time">1:37 PM</p>
+                </div>
+
+                <div class="send-form">
+                    <div class="arrow-right"></div>
+                    <div class="send">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                    </div>
+                    <p class="time">1:38 PM</p>
+                </div>
+
+                <div class="receive-form">
+                    <div class="arrow-up"></div>
+                    <div class="receive">
+                        <p>elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipisicing  </p>
+                    </div>
+                    <p class="time">1:38 PM</p>
+                </div>
+
+                <div class="send-form">
+                    <div class="arrow-right"></div>
+                    <div class="send">
+                        <p>Lorem icing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+                    <p class="time">1:38 PM</p>
+                </div>
+
+                <div class="send-form">
+                    <div class="arrow-right transparent"></div>
+                    <div class="send">
+                        <p>eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+                    </div>
+                    <p class="time">1:38 PM</p>
+                </div>
+
+                <div class="receive-form">
+                    <div class="arrow-up"></div>
+                    <div class="receive">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                    </div>
+                    <p class="time">1:38 PM</p>
+                </div>
+
+            </div>
+
+            <div class="chat-canvas second-canvas display">
+
+                <div class="receive-form">
+                    <div class="arrow-up"></div>
+                    <div class="receive">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                    </div>
+                    <p class="time">1:37 PM</p>
+                </div>
+
+                <div class="send-form">
+                    <div class="arrow-right"></div>
+                    <div class="send">
+                        <p>Lorem ipsum dolor</p>
+                    </div>
+                    <p class="time">1:38 PM</p>
+                </div>
+
+                <div class="receive-form">
+                    <div class="arrow-up"></div>
+                    <div class="receive">
+                        <p>Lorem icing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+                    <p class="time">1:38 PM</p>
+                </div>
+
+                <div class="send-form">
+                    <div class="arrow-right"></div>
+                    <div class="send">
+                        <p>elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+                    </div>
+                    <p class="time">1:38 PM</p>
+                </div>
+
+
+            </div>
+
+            <!--.............................................
+            The bottom input form .. send button
+            ..............................................-->
+            <form id="input">
+                <div class="attach">
+                    <i class="fas fa-paperclip"></i>
+                </div>
+                <input id="message" type="text" placeholder="Type your message">
+                <button id="send-button" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
+
